@@ -7,6 +7,7 @@ dato2 DB '2'
 res   DB 0
 .code
 inicio PROC
+    ; Este ejemplo es para un solo digito
 	MOV BL,0
 	AND dato1,0Fh
 	AND dato2,15d
