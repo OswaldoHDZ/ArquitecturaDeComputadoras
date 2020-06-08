@@ -16,34 +16,34 @@ mte REAL8 0.0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
-;Expresión a implmentar:
+;Expresiï¿½n a implmentar:
 ;
 ;mte=sqrt( pow( (h/L1)*sen(thehta),2) + pow(me,2);
 ;a=h L1 / thetha sin();
-;Notación potsfija
+;Notaciï¿½n potsfija
 ; me me * h LI/ thetha sin() * a * + sqrt 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-main PROC
+inicio PROC
 
-FLD me
-FLD ST(0)
-FMUL       ;me*me
-FLD h
-FLD L1
-FDIV       ;h/LI
-FLD theta
-FSIN       ;sin(theta)
-FMUL       ; (h/l1)*sin(theha)
-FLD ST(0)  
-FMUL       ;[(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]
-FADD       ;[(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]+ me*me
-FSQRT      ;sqrt([(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]+ me*me)
-FST mte
+    FLD me
+    FLD ST(0)
+    FMUL       ;me*me
+    FLD h
+    FLD L1
+    FDIV       ;h/LI
+    FLD theta
+    FSIN       ;sin(theta)
+    FMUL       ; (h/l1)*sin(theha)
+    FLD ST(0)  
+    FMUL       ;[(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]
+    FADD       ;[(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]+ me*me
+    FSQRT      ;sqrt([(h/l1)*sin(theha)] * [(h/l1)*sin(theha)]+ me*me)
+    FST mte
 
-INVOKE ExitProcess,0
+    INVOKE ExitProcess,0
 
 
-main ENDP
+inicio ENDP
 END
